@@ -1,4 +1,4 @@
-## Re:0
+# Re:0
 `Easy Reverse`
 
 [re100](attachment/re100) \
