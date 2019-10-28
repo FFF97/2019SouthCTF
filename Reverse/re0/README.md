@@ -1,5 +1,4 @@
-# Re:0
-## 题目
+## Re:0
 `Easy Reverse`
 
 [re100](attachment/re100) \
