@@ -1,0 +1,168 @@
+        body {
+            font-weight: bold;
+
+            background: url() no-repeat;
+            background-size: 100% 100%;
+            font-family: 微软雅黑;
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        .container {
+            padding: 1rem;
+            margin-top: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1200px;
+            height: 1200px;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        #web_bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-width: 1000px;
+            z-index: -10;
+            zoom: 1;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-position: center 0;
+        }
+
+
+        .xf_head {
+
+            background-color: #4c4c4c;
+            padding: 6px 18px;
+            font-size: 16px;
+            color: white;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        .xf_body {
+            text-align: center;
+            background-color: #f3f3f3;
+            padding: 6px 10px;
+            margin-bottom: 6px;
+            height: 420px;
+        }
+
+        .xf_btn {
+
+            display: inline-block;
+            margin: 22px 6px;
+            width: 100px;
+            /* font-weight: bold; */
+            cursor: pointer;
+            user-select: none;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        .xf_get_pay {
+            /* height:100px; */
+            background-color: #828282;
+            color: white;
+            padding: 1px 4px 1px 10px;
+            text-align: left;
+            margin: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        .xf_get_title {
+            padding: 6px;
+            background-color: #d6d5d5;
+        }
+
+        .gyxf_chara {
+            display: inline-block;
+            text-align: center;
+            margin: 1px;
+            height: 214px;
+            padding-top: 66px;
+        }
+
+        .rank3 {
+            background-color: #bfbfbf;
+        }
+
+        .rank4 {
+            background-color: #aaace4;
+        }
+
+        .rank5{
+            background-color: #fff8a3;
+    color: #948f55;
+        }
+
+        .rank6{
+            background-color: #ffca2c;
+        }
+
+        .animation1{
+            position: relative;
+    animation: chacard .4s;
+    -moz-animation: chacard .4s;
+    -webkit-animation: chacard .4s;
+    -o-animation: chacard .4s;
+        }
+
+        .animation2 {
+            position: relative;
+    animation: chacard2 .4s;
+    -moz-animation: chacard2 .4s;
+    -webkit-animation: chacard2 .4s;
+    -o-animation: chacard2 .4s;
+        }
+    @keyframes chacard
+{
+from {top: -15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@-moz-keyframes chacard /* Firefox */
+{
+from {top: -15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@-webkit-keyframes chacard /* Safari and Chrome */
+{
+from {top: -15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@-o-keyframes chacard /* Opera */
+{
+from {top: -15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@keyframes chacard2
+{
+from {top: 15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@-moz-keyframes chacard2 /* Firefox */
+{
+from {top: 15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@-webkit-keyframes chacard2 /* Safari and Chrome */
+{
+from {top: 15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
+@-o-keyframes chacard2 /* Opera */
+{
+from {top: 15px;opacity:0;}
+to {top: 0;opacity:1;}
+}
