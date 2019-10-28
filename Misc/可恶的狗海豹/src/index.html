@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>明日方舟干员寻访模拟</title>
+    <link rel="stylesheet" href="xf.css">
+
+
+</head>
+
+<body>
+        
+    <div id="web_bg" style="background-image: url('C:\\Users\\mashi\\Desktop\\t01a90765a503d2aa8d.jpg');"></div>
+
+    <div class='container'>
+        <div class="xf" style="height: 480px">
+            <div class="xf_head">
+                寻访
+            </div>
+
+            <div class="xf_body">
+                <div class="xf_btn" data-times="1">
+                    <div class="xf_get_pay"><img alt="合成玉 mini icon.png"
+                            src="http://p9.qhimg.com/dr/32__/t01ad8e5bf1b86f975a.png" width="32" height="32"
+                            data-file-name="合成玉_mini_icon.png" data-file-width="32" data-file-height="32">×600</div>
+                    <div class="xf_get_title">寻访一次</div>
+                </div>
+                <div class="xf_btn" data-times="10">
+                    <div class="xf_get_pay"><img alt="合成玉 mini icon.png"
+                            src="http://p9.qhimg.com/dr/32__/t01ad8e5bf1b86f975a.png" width="32" height="32"
+                            data-file-name="合成玉_mini_icon.png" data-file-width="32" data-file-height="32">×6000</div>
+                    <div class="xf_get_title">寻访十次</div>
+                </div>
+
+                <div id="gyxf_get_chara_box" style="justify-content: center;display: flex;width: 100%">
+               
+                </div>
+            </div>
+        </div>
+        <div class="xf">
+            <div class="xf_head">
+                寻访统计
+            </div>
+            <div class="xf_body" style="font-weight: normal;height:340px">
+                <div id="gyxf_pay">
+                    <p>寻访次数：<span id="gyxf_times">0</span>
+                    </p>
+                    <hr>
+                    <p>3星干员：<span id="gyxf_r3_get">0</span>
+                    </p>
+                    <p>4星干员：<span id="gyxf_r4_get">0</span>
+                    </p>
+                    <p>5星干员：<span id="gyxf_r5_get">0</span>
+                    </p>
+                    <p>6星干员：<span id="gyxf_r6_get">0</span>
+                    </p>
+                    <p>星星：<span id="star">0</span></p>
+                    <hr>
+                    <p>距离上次抽到6星次数：<span id="gyxf_r6_times">0</span>
+                    </p>
+                    <div class="gyxf_phl">
+                        <p>如果50次都没抽到6星，则下一次6星概率+2%，详细请查看下方的标准寻访说明。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xf">
+            <div class="xf_head">
+                可能出现的干员
+            </div>
+            <div class="xf_body" style="font-weight: normal;height: 260px">
+                <div>★★★★★★(<span id="gyxf_prob_r6" data-prob="2" style="color: rgb(85, 85, 85);">2</span>%)</div>
+                <div id="gyxf_chara_r6">推进之王/能天使/闪灵/星熊/伊芙利特/塞雷娅/银灰/艾雅法拉/夜莺/陈/安洁莉娜/斯卡蒂/黑/赫拉格</div>
+                <hr>
+                <div>★★★★★(<span id="gyxf_prob_r5" data-prob="8" style="color: rgb(85, 85, 85);">8</span>%)</div>
+                <div id="gyxf_chara_r5">
+                    芙兰卡/德克萨斯/凛冬/白面鸮/幽灵鲨/蓝毒/普罗旺斯/赫默/雷蛇/临光/红/夜魔/天火/初雪/拉普兰德/华法琳/守林人/狮蝎/真理/白金/陨星/梅尔/可颂/崖心/食铁兽/空/诗怀雅/格劳克斯/星极
+                </div>
+                <hr>
+                <div>★★★★(<span id="gyxf_prob_r4" data-prob="50" style="color: rgb(85, 85, 85);">50</span>%)</div>
+                <div id="gyxf_chara_r4">
+                    深海色/杜宾/白雪/远山/夜烟/流星/末药/蛇屠箱/猎蜂/慕斯/砾/暗索/调香师/地灵/霜叶/清道夫/古米/角峰/缠丸/阿消/红豆/杰西卡/格雷伊/苏苏洛/桃金娘</div>
+                <hr>
+                <div>★★★(<span id="gyxf_prob_r3" data-prob="40" style="color: rgb(85, 85, 85);">40</span>%)</div>
+                <div id="gyxf_chara_r3">芬/克洛丝/炎熔/米格鲁/芙蓉/卡缇/史都华德/香草/玫兰莎/安赛尔/梓兰/翎羽/空爆/月见夜/斑点/泡普卡</div>
+            </div>
+        </div>
+    </div>
+    <div id="gyxf_data" style="display:none">
+            <div id="gyxf_data_r3" data-name="16">
+            <div data-name="芬"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%8A%AC" title="芬"><img alt="芬05.png" src="http://p6.qhimg.com/dr/80__/t0112ded5e2c886e2ed.png" width="80" height="80" data-file-name="芬05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="克洛丝"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%85%8B%E6%B4%9B%E4%B8%9D" title="克洛丝"><img alt="克洛丝05.png" src="http://p1.qhimg.com/dr/80__/t01c1bfbb9233daccd4.png" width="80" height="80" data-file-name="克洛丝05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="炎熔"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%82%8E%E7%86%94" title="炎熔"><img alt="炎熔05.png" src="http://p3.qhimg.com/dr/80__/t01651c49953d8bb071.png" width="80" height="80" data-file-name="炎熔05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="米格鲁"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%B1%B3%E6%A0%BC%E9%B2%81" title="米格鲁"><img alt="米格鲁05.png" src="http://p3.qhimg.com/dr/80__/t01c064f122e000a7b7.png" width="80" height="80" data-file-name="米格鲁05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="芙蓉"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%8A%99%E8%93%89" title="芙蓉"><img alt="芙蓉05.png" src="http://p7.qhimg.com/dr/80__/t01cc057775b9b8d2ea.png" width="80" height="80" data-file-name="芙蓉05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="卡缇"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%8D%A1%E7%BC%87" title="卡缇"><img alt="卡缇05.png" src="http://p9.qhimg.com/dr/80__/t01a11167e7b570c380.png" width="80" height="80" data-file-name="卡缇05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="史都华德"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%8F%B2%E9%83%BD%E5%8D%8E%E5%BE%B7" title="史都华德"><img alt="史都华德05.png" src="http://p4.qhimg.com/dr/80__/t0179edfff56ec456df.png" width="80" height="80" data-file-name="史都华德05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="香草"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%A6%99%E8%8D%89" title="香草"><img alt="香草05.png" src="http://p4.qhimg.com/dr/80__/t01f064d97af7b444a7.png" width="80" height="80" data-file-name="香草05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="玫兰莎"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%8E%AB%E5%85%B0%E8%8E%8E" title="玫兰莎"><img alt="玫兰莎05.png" src="http://p1.qhimg.com/dr/80__/t01e1fe82f378388ef3.png" width="80" height="80" data-file-name="玫兰莎05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="安赛尔"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%AE%89%E8%B5%9B%E5%B0%94" title="安赛尔"><img alt="安赛尔05.png" src="http://p7.qhimg.com/dr/80__/t013ee228947b0d0e66.png" width="80" height="80" data-file-name="安赛尔05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="梓兰"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%A2%93%E5%85%B0" title="梓兰"><img alt="梓兰05.png" src="http://p2.qhimg.com/dr/80__/t016c94f9edd3891f30.png" width="80" height="80" data-file-name="梓兰05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="翎羽"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%BF%8E%E7%BE%BD" title="翎羽"><img alt="翎羽05.png" src="http://p0.qhimg.com/dr/80__/t012205ad0f9ddadd75.png" width="80" height="80" data-file-name="翎羽05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="空爆"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%A9%BA%E7%88%86" title="空爆"><img alt="空爆05.png" src="http://p6.qhimg.com/dr/80__/t0160320f7e19905e9c.png" width="80" height="80" data-file-name="空爆05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="月见夜"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%9C%88%E8%A7%81%E5%A4%9C" title="月见夜"><img alt="月见夜05.png" src="http://p5.qhimg.com/dr/80__/t01e4af18cc68307213.png" width="80" height="80" data-file-name="月见夜05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="斑点"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%96%91%E7%82%B9" title="斑点"><img alt="斑点05.png" src="http://p7.qhimg.com/dr/80__/t01333a231b87292784.png" width="80" height="80" data-file-name="斑点05.png" data-file-width="600" data-file-height="600"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="泡普卡"><div class="gyxf_chara rank3">
+            <div class="gyxf_rank">★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%B3%A1%E6%99%AE%E5%8D%A1" title="泡普卡"><img alt="泡普卡05.png" src="http://p8.qhimg.com/dr/80__/t01958dfad97135ec5f.png" width="80" height="80" data-file-name="泡普卡05.png" data-file-width="200" data-file-height="200"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div></div>
+            <div id="gyxf_data_r4" data-name="25">
+            <div data-name="深海色"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%B7%B1%E6%B5%B7%E8%89%B2" title="深海色"><img alt="深海色05.png" src="http://p4.qhimg.com/dr/80__/t01ede14c4b4255d441.png" width="80" height="80" data-file-name="深海色05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="杜宾"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%9D%9C%E5%AE%BE" title="杜宾"><img alt="杜宾05.png" src="http://p2.qhimg.com/dr/80__/t0115aa310877b07f77.png" width="80" height="80" data-file-name="杜宾05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="白雪"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%99%BD%E9%9B%AA" title="白雪"><img alt="白雪05.png" src="http://p5.qhimg.com/dr/80__/t0118b51415939706cc.png" width="80" height="80" data-file-name="白雪05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="远山"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%BF%9C%E5%B1%B1" title="远山"><img alt="远山05.png" src="http://p1.qhimg.com/dr/80__/t016689d1382b22924d.png" width="80" height="80" data-file-name="远山05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="夜烟"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%A4%9C%E7%83%9F" title="夜烟"><img alt="夜烟05.png" src="http://p7.qhimg.com/dr/80__/t0117ba7620bc644449.png" width="80" height="80" data-file-name="夜烟05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="流星"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%B5%81%E6%98%9F" title="流星"><img alt="流星05.png" src="http://p0.qhimg.com/dr/80__/t01269411046deb1bc2.png" width="80" height="80" data-file-name="流星05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="末药"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%9C%AB%E8%8D%AF" title="末药"><img alt="末药05.png" src="http://p5.qhimg.com/dr/80__/t0164c87bae000dcd69.png" width="80" height="80" data-file-name="末药05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="蛇屠箱"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%9B%87%E5%B1%A0%E7%AE%B1" title="蛇屠箱"><img alt="蛇屠箱05.png" src="http://p2.qhimg.com/dr/80__/t012603ad559fe16630.png" width="80" height="80" data-file-name="蛇屠箱05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="猎蜂"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%8C%8E%E8%9C%82" title="猎蜂"><img alt="猎蜂05.png" src="http://p9.qhimg.com/dr/80__/t01ad54a8ac984b9946.png" width="80" height="80" data-file-name="猎蜂05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="慕斯"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%85%95%E6%96%AF" title="慕斯"><img alt="慕斯05.png" src="http://p1.qhimg.com/dr/80__/t0119f87682f7d8917b.png" width="80" height="80" data-file-name="慕斯05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="砾"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%A0%BE" title="砾"><img alt="砾05.png" src="http://p0.qhimg.com/dr/80__/t01c035725472bf99fb.png" width="80" height="80" data-file-name="砾05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="暗索"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%9A%97%E7%B4%A2" title="暗索"><img alt="暗索05.png" src="http://p9.qhimg.com/dr/80__/t0114386af7b5ab089b.png" width="80" height="80" data-file-name="暗索05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="调香师"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%B0%83%E9%A6%99%E5%B8%88" title="调香师"><img alt="调香师05.png" src="http://p0.qhimg.com/dr/80__/t01a216782933830c81.png" width="80" height="80" data-file-name="调香师05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="地灵"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%9C%B0%E7%81%B5" title="地灵"><img alt="地灵05.png" src="http://p6.qhimg.com/dr/80__/t01881bc81c3337410c.png" width="80" height="80" data-file-name="地灵05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="霜叶"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%9C%9C%E5%8F%B6" title="霜叶"><img alt="霜叶05.png" src="http://p2.qhimg.com/dr/80__/t019b6f499396ff0406.png" width="80" height="80" data-file-name="霜叶05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="清道夫"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%B8%85%E9%81%93%E5%A4%AB" title="清道夫"><img alt="清道夫05.png" src="http://p1.qhimg.com/dr/80__/t01c236754d42051e9f.png" width="80" height="80" data-file-name="清道夫05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="古米"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%8F%A4%E7%B1%B3" title="古米"><img alt="古米05.png" src="http://p6.qhimg.com/dr/80__/t012b8712083684ebe9.png" width="80" height="80" data-file-name="古米05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="角峰"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%A7%92%E5%B3%B0" title="角峰"><img alt="角峰05.png" src="http://p7.qhimg.com/dr/80__/t0160caebbc46aa92d6.png" width="80" height="80" data-file-name="角峰05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="缠丸"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%BC%A0%E4%B8%B8" title="缠丸"><img alt="缠丸05.png" src="http://p2.qhimg.com/dr/80__/t010f3fc472b4900b95.png" width="80" height="80" data-file-name="缠丸05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="阿消"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%98%BF%E6%B6%88" title="阿消"><img alt="阿消05.png" src="http://p4.qhimg.com/dr/80__/t018f48444dc04bab7f.png" width="80" height="80" data-file-name="阿消05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="红豆"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%BA%A2%E8%B1%86" title="红豆"><img alt="红豆05.png" src="http://p8.qhimg.com/dr/80__/t01f1dfa4fb29b3fd6e.png" width="80" height="80" data-file-name="红豆05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="杰西卡"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%9D%B0%E8%A5%BF%E5%8D%A1" title="杰西卡"><img alt="杰西卡05.png" src="http://p6.qhimg.com/dr/80__/t014605bfade2a6cba7.png" width="80" height="80" data-file-name="杰西卡05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="格雷伊"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%A0%BC%E9%9B%B7%E4%BC%8A" title="格雷伊"><img alt="格雷伊05.png" src="http://p2.qhimg.com/dr/80__/t012acaf0017b7ec4a3.png" width="80" height="80" data-file-name="格雷伊05.png" data-file-width="150" data-file-height="150"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="苏苏洛"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%8B%8F%E8%8B%8F%E6%B4%9B" title="苏苏洛"><img alt="苏苏洛05.png" src="http://p7.qhimg.com/dr/80__/t01f12c6260db6c90fb.png" width="80" height="80" data-file-name="苏苏洛05.png" data-file-width="186" data-file-height="186"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="桃金娘"><div class="gyxf_chara rank4">
+            <div class="gyxf_rank">★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%A1%83%E9%87%91%E5%A8%98" title="桃金娘"><img alt="桃金娘05.png" src="http://p2.qhimg.com/dr/80__/t01160b524417c2410a.png" width="80" height="80" data-file-name="桃金娘05.png" data-file-width="459" data-file-height="459"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div></div>
+            <div id="gyxf_data_r5" data-name="29">
+            <div data-name="芙兰卡"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%8A%99%E5%85%B0%E5%8D%A1" title="芙兰卡"><img alt="芙兰卡05.png" src="http://p1.qhimg.com/dr/80__/t017ddbdaf24f97c8d3.png" width="80" height="80" data-file-name="芙兰卡05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="德克萨斯"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF" title="德克萨斯"><img alt="德克萨斯05.png" src="http://p3.qhimg.com/dr/80__/t01fec5ad1cac71ea8f.png" width="80" height="80" data-file-name="德克萨斯05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="凛冬"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%87%9B%E5%86%AC" title="凛冬"><img alt="凛冬05.png" src="http://p0.qhimg.com/dr/80__/t01e318e95d7934d59a.png" width="80" height="80" data-file-name="凛冬05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="白面鸮"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%99%BD%E9%9D%A2%E9%B8%AE" title="白面鸮"><img alt="白面鸮05.png" src="http://p4.qhimg.com/dr/80__/t01c30f9d9e22ac92c6.png" width="80" height="80" data-file-name="白面鸮05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="幽灵鲨"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%B9%BD%E7%81%B5%E9%B2%A8" title="幽灵鲨"><img alt="幽灵鲨05.png" src="http://p1.qhimg.com/dr/80__/t0144bc8bb6c3b82fe5.png" width="80" height="80" data-file-name="幽灵鲨05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="蓝毒"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%93%9D%E6%AF%92" title="蓝毒"><img alt="蓝毒05.png" src="http://p7.qhimg.com/dr/80__/t01c2d752ccca46acc3.png" width="80" height="80" data-file-name="蓝毒05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="普罗旺斯"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%99%AE%E7%BD%97%E6%97%BA%E6%96%AF" title="普罗旺斯"><img alt="普罗旺斯05.png" src="http://p4.qhimg.com/dr/80__/t012ac05476f3e84b0b.png" width="80" height="80" data-file-name="普罗旺斯05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="赫默"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%B5%AB%E9%BB%98" title="赫默"><img alt="赫默05.png" src="http://p9.qhimg.com/dr/80__/t01ae211dc87d436afa.png" width="80" height="80" data-file-name="赫默05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="雷蛇"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%9B%B7%E8%9B%87" title="雷蛇"><img alt="雷蛇05.png" src="http://p4.qhimg.com/dr/80__/t019d88ea4258977505.png" width="80" height="80" data-file-name="雷蛇05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="临光"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E4%B8%B4%E5%85%89" title="临光"><img alt="临光05.png" src="http://p1.qhimg.com/dr/80__/t018f43603ad070b485.png" width="80" height="80" data-file-name="临光05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="红"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%BA%A2" title="红"><img alt="红05.png" src="http://p5.qhimg.com/dr/80__/t01f045b4be633c7b14.png" width="80" height="80" data-file-name="红05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="夜魔"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%A4%9C%E9%AD%94" title="夜魔"><img alt="夜魔05.png" src="http://p3.qhimg.com/dr/80__/t019da149dea89cb03d.png" width="80" height="80" data-file-name="夜魔05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="天火"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%A4%A9%E7%81%AB" title="天火"><img alt="天火05.png" src="http://p1.qhimg.com/dr/80__/t01f3769228747d1ffd.png" width="80" height="80" data-file-name="天火05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="初雪"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%88%9D%E9%9B%AA" title="初雪"><img alt="初雪05.png" src="http://p3.qhimg.com/dr/80__/t0143b62127bdc254d6.png" width="80" height="80" data-file-name="初雪05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="拉普兰德"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7" title="拉普兰德"><img alt="拉普兰德05.png" src="http://p4.qhimg.com/dr/80__/t011d0fc4cbc5d0510c.png" width="80" height="80" data-file-name="拉普兰德05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="华法琳"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%8D%8E%E6%B3%95%E7%90%B3" title="华法琳"><img alt="华法琳05.png" src="http://p3.qhimg.com/dr/80__/t011d33ebbf64a2556d.png" width="80" height="80" data-file-name="华法琳05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="守林人"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%AE%88%E6%9E%97%E4%BA%BA" title="守林人"><img alt="守林人05.png" src="http://p2.qhimg.com/dr/80__/t01fe9befb72c5fa20d.png" width="80" height="80" data-file-name="守林人05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="狮蝎"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%8B%AE%E8%9D%8E" title="狮蝎"><img alt="狮蝎05.png" src="http://p9.qhimg.com/dr/80__/t011893c426074ce802.png" width="80" height="80" data-file-name="狮蝎05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="真理"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%9C%9F%E7%90%86" title="真理"><img alt="真理05.png" src="http://p8.qhimg.com/dr/80__/t01afb8dd75627ff672.png" width="80" height="80" data-file-name="真理05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="白金"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%99%BD%E9%87%91" title="白金"><img alt="白金05.png" src="http://p5.qhimg.com/dr/80__/t018f36f2056cfb3753.png" width="80" height="80" data-file-name="白金05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="陨星"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%99%A8%E6%98%9F" title="陨星"><img alt="陨星05.png" src="http://p1.qhimg.com/dr/80__/t01076e24d8da6ffe44.png" width="80" height="80" data-file-name="陨星05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="梅尔"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%A2%85%E5%B0%94" title="梅尔"><img alt="梅尔05.png" src="http://p0.qhimg.com/dr/80__/t012c060bf0c7065917.png" width="80" height="80" data-file-name="梅尔05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="可颂"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%8F%AF%E9%A2%82" title="可颂"><img alt="可颂05.png" src="http://p8.qhimg.com/dr/80__/t015cb4a3a66c02d6ca.png" width="80" height="80" data-file-name="可颂05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="崖心"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%B4%96%E5%BF%83" title="崖心"><img alt="崖心05.png" src="http://p6.qhimg.com/dr/80__/t011f882e0c430d51a2.png" width="80" height="80" data-file-name="崖心05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="食铁兽"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%A3%9F%E9%93%81%E5%85%BD" title="食铁兽"><img alt="食铁兽05.png" src="http://p7.qhimg.com/dr/80__/t012e01eaf0e6fda37a.png" width="80" height="80" data-file-name="食铁兽05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%89%B9%E7%A7%8D" title="特种"><img alt="特种 icon.png" src="http://p1.qhimg.com/dr/40__/t017ddbeb4fa99a5452.png" width="40" height="40" data-file-name="特种_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="空"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E7%A9%BA" title="空"><img alt="空05.png" src="http://p2.qhimg.com/dr/80__/t01fcbb67562ce88b0b.png" width="80" height="80" data-file-name="空05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="诗怀雅"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%AF%97%E6%80%80%E9%9B%85" title="诗怀雅"><img alt="诗怀雅05.png" src="http://p6.qhimg.com/dr/80__/t01b1e6383df4eabd32.png" width="80" height="80" data-file-name="诗怀雅05.png" data-file-width="150" data-file-height="150"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="格劳克斯"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%A0%BC%E5%8A%B3%E5%85%8B%E6%96%AF" title="格劳克斯"><img alt="格劳克斯05.png" src="http://p1.qhimg.com/dr/80__/t015bbf2178fbf7f5cc.png" width="80" height="80" data-file-name="格劳克斯05.png" data-file-width="186" data-file-height="186"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="星极"><div class="gyxf_chara rank5">
+            <div class="gyxf_rank rank5">★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%98%9F%E6%9E%81" title="星极"><img alt="星极05.png" src="http://p3.qhimg.com/dr/80__/t0119e3a3207fc19062.png" width="80" height="80" data-file-name="星极05.png" data-file-width="450" data-file-height="450"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div></div>
+            <div id="gyxf_data_r6" data-name="14">
+            <div data-name="推进之王"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%8E%A8%E8%BF%9B%E4%B9%8B%E7%8E%8B" title="推进之王"><img alt="推进之王05.png" src="http://p3.qhimg.com/dr/80__/t01c502355dfb308d1d.png" width="80" height="80" data-file-name="推进之王05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%85%88%E9%94%8B" title="先锋"><img alt="先锋 icon.png" src="http://p7.qhimg.com/dr/40__/t016b070ca2a44811d4.png" width="40" height="40" data-file-name="先锋_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="能天使"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%83%BD%E5%A4%A9%E4%BD%BF" title="能天使"><img alt="能天使05.png" src="http://p7.qhimg.com/dr/80__/t019c37b9d9b5ea1a5c.png" width="80" height="80" data-file-name="能天使05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="闪灵"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%97%AA%E7%81%B5" title="闪灵"><img alt="闪灵05.png" src="http://p0.qhimg.com/dr/80__/t01530756367f2cee1c.png" width="80" height="80" data-file-name="闪灵05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="星熊"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%98%9F%E7%86%8A" title="星熊"><img alt="星熊05.png" src="http://p5.qhimg.com/dr/80__/t01ed97940a904fe79d.png" width="80" height="80" data-file-name="星熊05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="伊芙利特"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E4%BC%8A%E8%8A%99%E5%88%A9%E7%89%B9" title="伊芙利特"><img alt="伊芙利特05.png" src="http://p8.qhimg.com/dr/80__/t01665df6d2f7ffdc66.png" width="80" height="80" data-file-name="伊芙利特05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="塞雷娅"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%A1%9E%E9%9B%B7%E5%A8%85" title="塞雷娅"><img alt="塞雷娅05.png" src="http://p2.qhimg.com/dr/80__/t012dd0eaddfe75600b.png" width="80" height="80" data-file-name="塞雷娅05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E9%87%8D%E8%A3%85" title="重装"><img alt="重装 icon.png" src="http://p6.qhimg.com/dr/40__/t01b53e5e666ea83f80.png" width="40" height="40" data-file-name="重装_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="银灰"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%93%B6%E7%81%B0" title="银灰"><img alt="银灰05.png" src="http://p8.qhimg.com/dr/80__/t0198c1592aaa1d557b.png" width="80" height="80" data-file-name="银灰05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="艾雅法拉"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89" title="艾雅法拉"><img alt="艾雅法拉05.png" src="http://p2.qhimg.com/dr/80__/t01487774e7e38e5c1e.png" width="80" height="80" data-file-name="艾雅法拉05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E6%9C%AF%E5%B8%88" title="术师"><img alt="术师 icon.png" src="http://p9.qhimg.com/dr/40__/t0126a3d8c811c6d8c7.png" width="40" height="40" data-file-name="术师_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="夜莺"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%A4%9C%E8%8E%BA" title="夜莺"><img alt="夜莺05.png" src="http://p7.qhimg.com/dr/80__/t01a371828406834314.png" width="80" height="80" data-file-name="夜莺05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E5%8C%BB%E7%96%97" title="医疗"><img alt="医疗 icon.png" src="http://p1.qhimg.com/dr/40__/t0162ba345fb366650b.png" width="40" height="40" data-file-name="医疗_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="陈"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%99%88" title="陈"><img alt="陈05.png" src="http://p7.qhimg.com/dr/80__/t0159e503a3a6c082e6.png" width="80" height="80" data-file-name="陈05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="安洁莉娜"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E5%AE%89%E6%B4%81%E8%8E%89%E5%A8%9C" title="安洁莉娜"><img alt="安洁莉娜05.png" src="http://p5.qhimg.com/dr/80__/t01d02ff918590a9f9d.png" width="80" height="80" data-file-name="安洁莉娜05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BE%85%E5%8A%A9" title="辅助"><img alt="辅助 icon.png" src="http://p1.qhimg.com/dr/40__/t01bf65fefdae25f4bf.png" width="40" height="40" data-file-name="辅助_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="斯卡蒂"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E6%96%AF%E5%8D%A1%E8%92%82" title="斯卡蒂"><img alt="斯卡蒂05.png" src="http://p8.qhimg.com/dr/80__/t019b00ae321487781f.png" width="80" height="80" data-file-name="斯卡蒂05.png" data-file-width="1000" data-file-height="1000"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="黑"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E9%BB%91" title="黑"><img alt="黑05.png" src="http://p4.qhimg.com/dr/80__/t0146aec2ad4979c8d6.png" width="80" height="80" data-file-name="黑05.png" data-file-width="186" data-file-height="186"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E7%8B%99%E5%87%BB" title="狙击"><img alt="狙击 icon.png" src="http://p6.qhimg.com/dr/40__/t0152a43f1988cfd7c9.png" width="40" height="40" data-file-name="狙击_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div><div data-name="赫拉格"><div class="gyxf_chara rank6">
+            <div class="gyxf_rank">★★★★★★</div>
+            <div class="gyxf_img"><a href="/arknights/%E8%B5%AB%E6%8B%89%E6%A0%BC" title="赫拉格"><img alt="赫拉格05.png" src="http://p2.qhimg.com/dr/80__/t011bed820400b6f978.png" width="80" height="80" data-file-name="赫拉格05.png" data-file-width="222" data-file-height="222"></a></div>
+            <div class="gyxf_job"><a href="/arknights/%E8%BF%91%E5%8D%AB" title="近卫"><img alt="近卫 icon.png" src="http://p6.qhimg.com/dr/40__/t015043a70f595b648b.png" width="40" height="40" data-file-name="近卫_icon.png" data-file-width="90" data-file-height="90"></a></div>
+            </div></div></div>
+            </div>
+    <script src="jquery.js"></script>
+    <script src="xf.js"></script>
+</body>
+
+</html>
