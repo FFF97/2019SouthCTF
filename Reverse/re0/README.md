@@ -10,7 +10,7 @@
 
 这题其实相当于逆向的签到题，后来源码都给了，但是做题情况和我预料的差的有点远
 
-![avta](https://images-cdn.shimo.im/bJ58mrJLzWIELngx/image.png__thumbnail)
+[源码](Reverse/re0/src/re100.c)
 源码很容易就看懂，是对flag的每一个字符的ascii码先加上对应的下标i后，通过判断加上i后的flag[i] 是否在[a-z][A-Z][0-9]里，如果在，就减去数字0的ascii码
 
 这里有两个坑(?)，一个是有的同学可能看漏了一个`flag[i]+=i;`然后解了半天都解不出
