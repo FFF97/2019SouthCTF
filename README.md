@@ -15,3 +15,6 @@
 | [easypwn2](Pwn/pwn2/README.md)    |   [source](Pwn/pwn2/src)     |
 | [easypwn3](Pwn/pwn3/README.md)    |   [source](Pwn/pwn3/src)     |
 | [easypwn4](Pwn/pwn4/README.md)    |   [source](Pwn/pwn4/src)     |
+| [豆破苍穹(一)](Misc/豆破苍穹(一)/README.md)|                       |
+| [豆破苍穹(二)](Misc/豆破苍穹(二)/README.md)|                       |
+| [豆破苍穹(三)](Misc/豆破苍穹(三)/README.md)|                       |
