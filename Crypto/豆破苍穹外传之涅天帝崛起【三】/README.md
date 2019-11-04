@@ -56,6 +56,8 @@
 >
 > 
 
+就给脚本了，懒狗真的懒得写解说了
+
 ```python
 # /usr/bin/python
 import base64
