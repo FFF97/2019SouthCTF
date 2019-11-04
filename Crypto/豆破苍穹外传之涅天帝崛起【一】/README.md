@@ -1,0 +1,14 @@
+> 题目
+>
+> 涅普，代号Nepire，原名雷普，原雷族少族长，因在被魂族攻打时解不出Pwn题不敌魂族，惨遭灭门，除他以外无人生还，而自己也差一些魂飞魄散，因心中执念被圣杯感知，以圣杯黑泥重塑已身，可一身修为也消散一空。因重生于黑泥，故改姓为涅，涅者，黑泥也。
+> 后被贝斯家族收养，传下半部残缺的天级功法《贝斯决第一卷》，可他看不太懂，只看懂了一句前言“九者，数之极。”，你能帮他看看吗。
+>
+> `Vm0wd2VHUXhUblJWV0d4WFlURndVRlpzWkc5V1JteFZVMnhPYWxKc1NsWldSM1JQWVcxS1IxZHVhRmRTTTJoUVdWZDRTMk14VG5OaFJtUlhaV3hhVFZaclpEUlpWMUpJVm10c2FGSnRVbFJVVkVwdlpWWlplRmR0ZEZSTlZuQjZWakkxUjFZeVNrZFhia0pXWVd0d2RsbHFSbXRXTVZaeVUyMTRVMkpJUWxwV1ZFb3dZekZXZEZOcmFHaFNiV2hoV1d0a1UyUnNXbGRYYlhSWVVqRktTVnBGV25kV01rcEhZMFJhVjFadFVUQldha1pUWXpGT2NsWnNTbGRTTTAwMQ==`
+
+```python
+import base64
+s="Vm0wd2VHUXhUblJWV0d4WFlURndVRlpzWkc5V1JteFZVMnhPYWxKc1NsWldSM1JQWVcxS1IxZHVhRmRTTTJoUVdWZDRTMk14VG5OaFJtUlhaV3hhVFZaclpEUlpWMUpJVm10c2FGSnRVbFJVVkVwdlpWWlplRmR0ZEZSTlZuQjZWakkxUjFZeVNrZFhia0pXWVd0d2RsbHFSbXRXTVZaeVUyMTRVMkpJUWxwV1ZFb3dZekZXZEZOcmFHaFNiV2hoV1d0a1UyUnNXbGRYYlhSWVVqRktTVnBGV25kV01rcEhZMFJhVjFadFVUQldha1pUWXpGT2NsWnNTbGRTTTAwMQ=="
+for i in range(0,9):
+	s=base64.b64decode(s)
+print(s)
+```
