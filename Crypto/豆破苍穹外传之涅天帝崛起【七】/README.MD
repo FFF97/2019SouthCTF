@@ -43,3 +43,5 @@ t
 然后题目是有提示加盐的，所以flag{eng_ma_ni_ba_mi_hong}
 
 ##  Script 
+
+##  Flag
