@@ -1,3 +1,15 @@
+# 豆破苍穹外传之涅天帝崛起【六】
+
+```
+忘记抄描述了。。。
+
+密文：entgm__abis_a_nan_hgalimoslt
+```
+
+## WriteUp
+
+题目有提示是栅栏。
+
 栅栏变形，用[道家心法密籍《天仙金丹心法》](http://fff97.xmutsec.com/index.php/archives/10/#栅栏密码)那种方式去加密
 
 密文：entgm__abis_a_nan_hgalimoslt
@@ -29,3 +41,5 @@ t
 得到eng_saltma_ni_ba_mi_hongsalt
 
 然后题目是有提示加盐的，所以flag{eng_ma_ni_ba_mi_hong}
+
+##  Script 
