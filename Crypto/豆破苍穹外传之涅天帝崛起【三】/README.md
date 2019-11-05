@@ -54,7 +54,7 @@ print encode_b64(flag)
 # output: H7+OHZ■bGLc3nac3■aRDk7RfGo■bEJAiInvcDq==
 ```
 
-就给脚本了，懒狗真的懒得写解说了
+
 
 ## WriteUp
 
